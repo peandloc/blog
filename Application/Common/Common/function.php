@@ -60,81 +60,81 @@ function getIpaddr($ip,$newIP){
 function getOS() {
 	$os = '';
 	$Agent = $_SERVER['HTTP_USER_AGENT'];
-	if (eregi('win', $Agent) && strpos($Agent, '95')) {
+	if (preg_match('win', $Agent) && strpos($Agent, '95')) {
 		$os = 'Win 95';
-	} elseif (eregi('win 9x', $Agent) && strpos($Agent, '4.90')) {
+	} elseif (preg_match('win 9x', $Agent) && strpos($Agent, '4.90')) {
 		$os = 'Win ME';
-	} elseif (eregi('win', $Agent) && ereg('98', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('98', $Agent)) {
 		$os = 'Win 98';
-	} elseif (eregi('win', $Agent) && eregi('nt 5.0', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 5.0', $Agent)) {
 		$os = 'Win 2000';
-	} elseif (eregi('win', $Agent) && eregi('nt 6.0', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 6.0', $Agent)) {
 		$os = 'Win Vista';
-	} elseif (eregi('win', $Agent) && eregi('nt 6.1', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 6.1', $Agent)) {
 		$os = 'Win 7';
-	} elseif (eregi('win', $Agent) && eregi('nt 5.1', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 5.1', $Agent)) {
 		$os = 'Win XP';
-	} elseif (eregi('win', $Agent) && eregi('nt 6.2', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 6.2', $Agent)) {
 		$os = 'Win 8';
-	} elseif (eregi('win', $Agent) && eregi('nt 6.3', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 6.3', $Agent)) {
 		$os = 'Win 8.1';
-	} elseif (eregi('win', $Agent) && eregi('nt 10', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt 10', $Agent)) {
 		$os = 'Win 10';
-	} elseif (eregi('win', $Agent) && eregi('nt', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('nt', $Agent)) {
 		$os = 'Win NT';
-	} elseif (eregi('win', $Agent) && ereg('32', $Agent)) {
+	} elseif (preg_match('win', $Agent) && preg_match('32', $Agent)) {
 		$os = 'Win 32';
-	} elseif (ereg('Mi', $Agent)) {
+	} elseif (preg_match('Mi', $Agent)) {
 		$os = '小米';
-	} elseif (eregi('Android', $Agent) && ereg('LG', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('LG', $Agent)) {
 		$os = 'LG';
-	} elseif (eregi('Android', $Agent) && ereg('M1', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('M1', $Agent)) {
 		$os = '魅族';
-	} elseif (eregi('Android', $Agent) && ereg('MX4', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('MX4', $Agent)) {
 		$os = '魅族4';
-	} elseif (eregi('Android', $Agent) && ereg('M3', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('M3', $Agent)) {
 		$os = '魅族';
-	} elseif (eregi('Android', $Agent) && ereg('M4', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('M4', $Agent)) {
 		$os = '魅族';
-	} elseif (eregi('Android', $Agent) && ereg('Huawei', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('Huawei', $Agent)) {
 		$os = '华为';
-	} elseif (eregi('Android', $Agent) && ereg('HM201', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('HM201', $Agent)) {
 		$os = '红米';
-	} elseif (eregi('Android', $Agent) && ereg('KOT', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('KOT', $Agent)) {
 		$os = '红米4G版';
-	} elseif (eregi('Android', $Agent) && ereg('NX5', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('NX5', $Agent)) {
 		$os = '努比亚';
-	} elseif (eregi('Android', $Agent) && ereg('vivo', $Agent)) {
+	} elseif (preg_match('Android', $Agent) && preg_match('vivo', $Agent)) {
 		$os = 'Vivo';
-	} elseif (eregi('Android', $Agent)) {
+	} elseif (preg_match('Android', $Agent)) {
 		$os = 'Android';
-	} elseif (eregi('linux', $Agent)) {
+	} elseif (preg_match('linux', $Agent)) {
 		$os = 'Linux';
-	} elseif (eregi('unix', $Agent)) {
+	} elseif (preg_match('unix', $Agent)) {
 		$os = 'Unix';
-	} elseif (eregi('iPhone', $Agent)) {
+	} elseif (preg_match('iPhone', $Agent)) {
 		$os = '苹果';
-	} else if (eregi('sun', $Agent) && eregi('os', $Agent)) {
+	} else if (preg_match('sun', $Agent) && preg_match('os', $Agent)) {
 		$os = 'SunOS';
-	} elseif (eregi('ibm', $Agent) && eregi('os', $Agent)) {
+	} elseif (preg_match('ibm', $Agent) && preg_match('os', $Agent)) {
 		$os = 'IBM OS/2';
-	} elseif (eregi('Mac', $Agent) && eregi('PC', $Agent)) {
+	} elseif (preg_match('Mac', $Agent) && preg_match('PC', $Agent)) {
 		$os = 'Macintosh';
-	} elseif (eregi('PowerPC', $Agent)) {
+	} elseif (preg_match('PowerPC', $Agent)) {
 		$os = 'PowerPC';
-	} elseif (eregi('AIX', $Agent)) {
+	} elseif (preg_match('AIX', $Agent)) {
 		$os = 'AIX';
-	} elseif (eregi('HPUX', $Agent)) {
+	} elseif (preg_match('HPUX', $Agent)) {
 		$os = 'HPUX';
-	} elseif (eregi('NetBSD', $Agent)) {
+	} elseif (preg_match('NetBSD', $Agent)) {
 		$os = 'NetBSD';
-	} elseif (eregi('BSD', $Agent)) {
+	} elseif (preg_match('BSD', $Agent)) {
 		$os = 'BSD';
-	} elseif (ereg('OSF1', $Agent)) {
+	} elseif (preg_match('OSF1', $Agent)) {
 		$os = 'OSF1';
-	} elseif (ereg('IRIX', $Agent)) {
+	} elseif (preg_match('IRIX', $Agent)) {
 		$os = 'IRIX';
-	} elseif (eregi('FreeBSD', $Agent)) {
+	} elseif (preg_match('FreeBSD', $Agent)) {
 		$os = 'FreeBSD';
 	} elseif ($os == '') {
 		$os = 'Unknown';
@@ -162,7 +162,7 @@ function getNowDate() {
  */
 function isPhone($val) {
 
-	if (ereg("^1[1-9][0-9]{9}$", $val))
+	if (preg_match("^1[1-9][0-9]{9}$", $val))
 		return true;
 	return false;
 
