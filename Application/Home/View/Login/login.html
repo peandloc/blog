@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<include file="Public:header" />
+	<body>
+		<include file="Public:top" />		
+		<br />
+		<div class="container" style = "overflow:hidden;">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="{:U('index/index')}" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">登录</li></a>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+								 <form method="post" class="form form-block">
+									<div class = "form-group">
+										<div class="label">
+											<label for="uname">Login ID</label>
+											<div class = "field">
+												<input type = "text" class="input" id = "uname" name = 'uname'/>
+											</div>
+										</div>
+									</div>
+									<div class = "form-group">
+										<div class="label">
+											<label for="passwd">Password</label>
+											<div class = "field">
+												<input type = "password" class="input" id = "passwd" name = 'passwd'/>
+											</div>
+										</div>
+									</div>
+									<div class="form-button">
+									<button id = "btn_login"class="button bg-main" type="submit">登录</button>
+									<button id = "btn_cancel"class="button bg-main" type="submit">取消</button>
+									</div>
+								</form>	
+							<br />						
+							<br />							
+						</div>						
+						<hr />
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+				<include file="Public:right" />
+			</div>
+		</div>	
+		<include file="Public:footer" />
+	</body>
+</html>

@@ -1,0 +1,194 @@
+[ 2016-03-19T16:48:24+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-03-19T16:48:24+08:00 ] ::1 /Admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000215s ]
+
+[ 2016-03-19T16:48:33+08:00 ] ::1 /Admin/Login/dologin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+SQL: SHOW COLUMNS FROM `web_admin` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_admin` WHERE `user` = 'peandloc' AND `state` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `web_admin` SET `last_logintime`='1458377313',`last_loginip`='127.0.0.1' WHERE `id` = 108 [ RunTime:0.0796s ]
+
+[ 2016-03-19T16:48:33+08:00 ] ::1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: menu_list /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+NOTIC: [2] Invalid argument supplied for foreach() /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `web_treenode` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `web_treenode` WHERE `menuflag` = 1  [ RunTime:0.0249s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined variable: Os /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-03-19T16:48:48+08:00 ] ::1 /Admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined index: menu_list /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+NOTIC: [2] Invalid argument supplied for foreach() /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `web_treenode` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `web_treenode` WHERE `menuflag` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `web_article` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` ORDER BY a_id desc LIMIT 0,10   [ RunTime:0.0182s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: Os /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Admin/7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-03-19T16:48:50+08:00 ] ::1 /Admin/Article/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: menu_list /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+NOTIC: [2] Invalid argument supplied for foreach() /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `web_treenode` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_treenode` WHERE `menuflag` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined variable: Os /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 150 行.
+NOTIC: [8] Undefined variable: detail /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 243 行.
+NOTIC: [8] Undefined variable: nowtime /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 352 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2016-03-19T16:57:00+08:00 ] ::1 /Admin/Article/runadd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined index: menu_list /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+NOTIC: [2] Invalid argument supplied for foreach() /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `web_treenode` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_treenode` WHERE `menuflag` = 1  [ RunTime:0.0001s ]
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 81 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 83 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 85 行.
+NOTIC: [8192] Function ereg() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 87 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 89 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 91 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 93 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 95 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 97 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 99 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 101 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 103 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 105 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 107 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 109 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 111 行.
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0017s ]
+SQL: INSERT INTO `web_article` (`a_title`,`cate_id`,`photo`,`a_keyword`,`a_remark`,`a_content`,`a_red`,`a_type`,`a_views`,`a_writer`,`create_time`,`create_ip`,`last_time`,`a_from`) VALUES ('Thinkphp 在模板中的U方法中添加JS参数的方法','1','','U','//var data = \'chen\'; 要把data作为U方法的参数
+var str = &quot;{:U(\'login/login\',[\'username\'=&gt;\'jsusername\'])}&quot;;
+str = str.replace(\'jsusername\',data);','<p>//var data = &#39;chen&#39;; 要把data作为U方法的参数</p><p>var str = &quot;{:U(&#39;login/login&#39;,[&#39;username&#39;=&gt;&#39;jsusername&#39;])}&quot;;</p><p>str = str.replace(&#39;jsusername&#39;,data);</p><p><br/></p><p>//还有一种方法，不通用，依赖于TP所用的路由模式</p><p><span style=\"color: rgb(50, 50, 50); font-family: &#39;Century Gothic&#39;, &#39;Microsoft yahei&#39;; line-height: 25.6px; background-color: rgb(255, 255, 255);\">var str = &quot;{:U(&#39;login/login&#39;)}?username=&quot;+data;&nbsp;</span></p>','1','1','1','peandloc','1458377820','0.0.0.0','1458377820','Linux') [ RunTime:0.0269s ]
+
+[ 2016-03-19T16:57:01+08:00 ] ::1 /Admin/article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined index: menu_list /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+NOTIC: [2] Invalid argument supplied for foreach() /usr/share/nginx/html/thinkphp/lunhui/Application/Admin/Controller/BaseController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `web_treenode` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_treenode` WHERE `menuflag` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `web_article` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `web_article` ORDER BY a_id desc LIMIT 0,10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: Os /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Admin/7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<include file="Public:header" />
+	<body>
+		<include file="Public:top" />		
+		<br />
+		<div class="container" style = "overflow:hidden;">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="{:U('index/index')}" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">注册成功</li></a>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						注册成功,请前往邮箱激动帐号!&nbsp;^v^
+						<br/>
+						<br/>
+						如果没收到邮件，请点击重发
+						<button type = 'button' class = 'button bg-main' id = 'sendMail'>重发</button>						
+						<hr />
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+				<include file="Public:right" />
+			</div>
+		</div>	
+		<include file="Public:footer" />
+		<script>
+				$(function(){
+					$("#sendMail").click(function(){
+						 window.location.reload(); 
+					});
+				})
+		</script>
+	</body>
+</html>

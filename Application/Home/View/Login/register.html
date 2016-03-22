@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<include file="Public:header" />
+	<body>
+		<include file="Public:top" />		
+		<br />
+		<div class="container" style = "overflow:hidden;">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="{:U('index/index')}" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">注册</li></a>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+								 <!-- <form method="post" class="form form-block"> -->
+									<div  class = "form-group">
+											<div  id = 'register_account' class = "field">
+												<span>帐号</span><input type = "text" class="input"  name = 'loginid'/>
+												<div class="input-note">
+													account
+												</div>
+											</div>
+									</div>
+									<div class = "form-group">
+											<div id = "register_password" class = "field">
+												<span>密码</span><input type = "password" class="input"  name = 'passwd'/>									
+												<div class = "input-note">
+													password
+												</div>
+											</div>
+									</div>
+									<div class = "form-group">											
+											<div id = "register_repassword" class = "field">
+												<span>再次输入密码</span><input type = "password" class="input"  name = 'passwd'/>									
+												<div class = "input-note">
+													repassword
+												</div>
+											</div>
+									</div>
+									<div class="form-button">
+									<button id = "btn_register"class="button bg-main" type="submit">注册</button>
+									</div>
+								<!-- </form>	 -->
+							<br />						
+							<br />							
+						</div>						
+						<hr />
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+				<include file="Public:right" />
+			</div>
+		</div>	
+		<include file="Public:footer" />
+		<script>
+			var accountOk	 = false;
+			var passwordOk	 = false;
+			var repasswordOk = false; 
+			$(function(){
+				$("#btn_register").click(function(){
+					// alert('1');
+					var user = $('#register_account input').val().replace(/\s/g,'');
+					var password = $('#register_password input').val().replace(/\s/g,'');
+					var repassword = $('#register_repassword input').val().replace(/\s/g,'');
+					if(accountOk && passwordOk && repasswordOk){
+						$.ajax({
+							url:"{:U('login/checkAccount')}",
+							type:'post',
+							data:{
+								'user':user,
+								'password':password,
+								'repassword':repassword,
+							},
+							dataType:'json',
+							error:function(){
+								alert('error1');
+							},
+							success:function(data){
+								// alert("{:U('login/successregister',['user'=>'"+data.user+"'])}");
+								var strUrl = "{:U('login/successregister',['user'=>datauser])}";
+								strUrl = strUrl.replace('datauser',data.user); 
+								window.location = strUrl;
+							}
+						});
+					}else{
+						alert('haha');
+					}
+					
+				});
+
+				//check is account  empty or exists
+				$("#register_account input").blur(function(){
+					if(!$(this).val()){
+						$('#register_account div').html('帐号不能为空').addClass('text-red').removeClass('text-green');
+						accountOk = false;
+						return;
+					}
+					if($('#register_account div').hasClass('text-red')){
+						$('#register_account div').html('account').removeClass('text-red');
+						accountOk = true;
+					}
+					var user = $(this).val();
+					$.ajax({
+						url:"{:U('Login/checkAccount')}",
+						type:'post',
+						data:{
+							'user':user
+						},
+						dataType:'json',
+						error:function(){
+							layer.msg('无法访问数据库，请检查你的数据库配置',function(){});
+						},
+						success:function(data){
+							// data.errMsg ? $("#register_account div").html(data.errMsg).removeClass('text-green').addClass('text-red') : $('#register_account div').html('该账号可用').addClass('text-green');
+							if(data.errMsg){
+								$("#register_account div").html(data.errMsg).removeClass('text-green').addClass('text-red');
+								accountOk = false;
+							}else{
+								$('#register_account div').html('该账号可用').addClass('text-green');
+								accountOk = true;
+							}
+
+						}
+					});
+				});
+
+				//check is password empty
+				$("#register_password input").blur(function(){
+					if(!$(this).val()){
+						$('#register_password div').html('密码不能为空').addClass('text-red');
+						passwordOk = false;
+						return;
+					}else{
+						passwordOk = true;
+					}
+					if($('#register_password div').hasClass('text-red')){
+						$('#register_password div').html('password').removeClass('text-red');
+						passwordOk = true;
+					}
+				});
+
+				$("#register_repassword input").blur(function(){
+					if(!$(this).val()){
+						$('#register_repassword div').html('不能为空').addClass('text-red').removeClass('text-green');
+						repasswordOk = false;
+						return;
+					}
+					var password 	= $("#register_password input").val();
+					var repassword 	= $(this).val();
+					// (password == repassword && password) ? $('#register_repassword div').html('两次输入的密码一致').removeClass('text-red') : $('#register_repassword div').html('两次输入的密码不一致').addClass('text-red');
+					if(password == repassword && password){
+						$('#register_repassword div').html('两次输入的密码一致').removeClass('text-red').addClass('text-green');
+						repasswordOk = true;
+					}else{
+						$('#register_repassword div').html('两次输入的密码不一致').removeClass('text-green').addClass('text-red');
+						repasswordOk = false;
+					}
+				});
+
+
+			});
+		</script>
+	</body>
+</html>

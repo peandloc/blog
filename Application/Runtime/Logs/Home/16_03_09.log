@@ -1,0 +1,163 @@
+[ 2016-03-09T13:32:17+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016792s ]
+NOTIC: [8] Undefined index: code /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 24 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 81 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 83 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 85 行.
+NOTIC: [8192] Function ereg() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 87 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 89 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 91 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 93 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 95 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 97 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 99 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 101 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 103 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 105 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 107 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 109 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 111 行.
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.3100s ]
+SQL: SELECT `a_keyword`,`a_id`,`create_time` FROM `web_article` WHERE ( a_keyword != '' and a_views > 0 ) ORDER BY create_time desc LIMIT 50   [ RunTime:0.0459s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `web_carousel_list` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `web_carousel_list` WHERE ( img != '' and state > 0 ) ORDER BY orderby  [ RunTime:0.1649s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `web_link` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `web_link` WHERE ( state = 1 ) ORDER BY orderby  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `web_liuyan` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `web_liuyan` ORDER BY add_time desc LIMIT 4   [ RunTime:0.0154s ]
+SQL: SELECT `a_id` FROM `web_article` WHERE ( a_views > 0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 4 LIMIT 1   [ RunTime:0.0088s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 60 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 61 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `a_id`,`photo`,`a_title`,`a_remark`,`a_keyword`,`cate_id`,`create_time`,`last_time`,`a_content`,`a_views`,`a_type`,`a_red`,`a_from`,`a_writer`,`create_ip` FROM `web_article` WHERE ( a_views > 0 ) ORDER BY a_views desc LIMIT 12   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `web_article` LIMIT 1   [ RunTime:0.0217s ]
+SQL: SELECT * FROM `web_article` INNER JOIN web_article_cate ON web_article_cate.cate_id = web_article.cate_id  ORDER BY a_id desc LIMIT 0,3   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [8] Undefined variable: v /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+NOTIC: [8] Undefined variable: v /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+NOTIC: [8] Undefined variable: v /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.286976s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.287060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.026574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.032147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.032347s ]
+
+[ 2016-03-09T13:32:19+08:00 ] ::1 /Uploads/images/2016-01-04/5689ced6df25d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+
+[ 2016-03-09T13:32:35+08:00 ] ::1 /Article/index/a_id/66.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: code /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 24 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 81 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 83 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 85 行.
+NOTIC: [8192] Function ereg() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 87 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 89 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 91 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 93 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 95 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 97 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 99 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 101 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 103 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 105 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 107 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 109 行.
+NOTIC: [8192] Function eregi() is deprecated /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 111 行.
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0011s ]
+SQL: SELECT `a_keyword`,`a_id`,`create_time` FROM `web_article` WHERE ( a_keyword != '' and a_views > 0 ) ORDER BY create_time desc LIMIT 50   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /usr/share/nginx/html/thinkphp/lunhui/Application/Home/Controller/BaseController.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `web_carousel_list` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `web_carousel_list` WHERE ( img != '' and state > 0 ) ORDER BY orderby  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `web_link` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_link` WHERE ( state = 1 ) ORDER BY orderby  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `web_liuyan` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `web_liuyan` ORDER BY add_time desc LIMIT 4   [ RunTime:0.0001s ]
+SQL: SELECT `a_id` FROM `web_article` WHERE ( a_views > 0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 59 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 60 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 66 LIMIT 1   [ RunTime:0.0061s ]
+SQL: SELECT `a_id`,`photo`,`a_title`,`a_remark`,`a_keyword`,`cate_id`,`create_time`,`last_time`,`a_content`,`a_views`,`a_type`,`a_red`,`a_from`,`a_writer`,`create_ip` FROM `web_article` WHERE ( a_views > 0 ) ORDER BY a_views desc LIMIT 12   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 66 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = 66 LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `web_article` SET `a_views`='5' WHERE `a_id` = 66 [ RunTime:0.0220s ]
+SQL: SELECT * FROM `web_article` WHERE ( a_views !=0 AND a_id <66 ) ORDER BY a_id desc LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `web_article` WHERE ( a_views !=0 AND a_id >66 ) ORDER BY a_id LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+NOTIC: [2] Missing argument 2 for getIpaddr(), called in /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Home/2ac6c1276904b87404ed678dbabb985c.php on line 168 and defined /usr/share/nginx/html/thinkphp/lunhui/Application/Common/Common/function.php 第 44 行.
+NOTIC: [8] Undefined variable: Common /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Home/2ac6c1276904b87404ed678dbabb985c.php 第 168 行.
+NOTIC: [8] Undefined variable: page /usr/share/nginx/html/thinkphp/lunhui/Application/Runtime/Cache/Home/2ac6c1276904b87404ed678dbabb985c.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
