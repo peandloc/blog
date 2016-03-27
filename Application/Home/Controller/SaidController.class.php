@@ -17,7 +17,8 @@ class SaidController extends BaseController {
         }
 		$this -> assign('list', $list);
 		$this -> assign('page', $show);
-		$this -> display();
+		// $this -> display();
+		$this->redirect('index/index');
 
     }
 

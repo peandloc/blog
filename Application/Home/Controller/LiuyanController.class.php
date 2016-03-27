@@ -18,7 +18,8 @@ class LiuyanController extends BaseController {
         }    
         $this->assign('page', $show); // 赋值分页输出
         $this->assign('list', $list);      
-        $this->display();
+        // $this->display();
+        $this->redirect('index/index');
     
     }
 

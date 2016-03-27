@@ -29,20 +29,34 @@
 								{$Article.a_content}
 							</div>
 							
-							<div class="a-write hidden-xs">
+							<div class="a-write hidden-xs" style = "display:none;">
 								<eq name="Article.a_type" value="1">本文为原创，转载请注明出处:&nbsp;&nbsp;<a>{:C('siteurl')}/Article/index/a_id/{$Article.a_id}.html</a>
 									<br>
 								</eq>
 								发表自：&nbsp;{$Article.a_from}&nbsp;&nbsp;地址：{$Article.create_ip|getIpaddr}&nbsp;&nbsp;评论：&nbsp;{$Common|count}&nbsp;&nbsp;关键词：&nbsp;{$Article['a_keyword']?$Article['a_keyword']:'暂无标签'}&nbsp;&nbsp;
 							</div>
+							<hr/>
 							<div>
-								<button class="button button-big bg-blue dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">评论</button>
-								<a class="dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">评论</a>
+								<!-- <button class="button button-big bg-blue dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">评论</button> -->
+								<!-- <a class="dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%" style="font-size:20px;">评论(0)</a> -->
+								<a id="comment" style="font-size:20px;"><strong>评论(0)</strong></a>
+								<div id="comments">
+									<foreach name="comments" item="com">
+										<div class = "divdong" style = "border-bottom:1px dashed #999999;">
+											<p>
+											<label class="text-main">{$com.username}:</label>{$com.d_content}
+											<br/>
+											<span style = "color:#9A9A9A;">{$com.time}</span>
+											</p>
+										</div>
+									</foreach>
+								</div>
 							</div>
-							<div>
+							<!-- <div>
 								<b>共有0个评论</b>
-							</div>
-							<div class="bdsharebuttonbox fenxiang">
+							</div> -->
+							<br/>
+							<div class="bdsharebuttonbox fenxiang" style = "display:none;">
 								<a class="bds_more" href="#" data-cmd="more"></a>
 								<a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone"></a>
 								<a title="分享到腾讯微博" class="bds_tqq" href="#" data-cmd="tqq"></a>
@@ -55,7 +69,7 @@
 								window._bd_share_config = {
 									"common": {
 										"bdSnsKey": {},
-										"bdText": "轮回博客的分享",
+										"bdText": "晓晓博客的分享",
 										"bdMini": "2",
 										"bdMiniList": false,
 										"bdPic": "http://tianjianlong.com.cn//Public/Img/logo.png",
@@ -68,7 +82,7 @@
 								0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 							</script>
 						</div>
-						<hr />
+						<hr /><br/>
 						<div class="a-up">
 							<p>上一篇：
 								<if condition="$down['a_id'] eq 0">
@@ -129,6 +143,14 @@
 				</div> -->
 			</div>
 		</div>
+	<script>
+		$(function(){
+			$("#comment").click(function(){
+
+			});
+		});
+	</script>
+
 	</body>
 
 </html>

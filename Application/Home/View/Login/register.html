@@ -42,6 +42,14 @@
 												</div>
 											</div>
 									</div>
+									<div class = "form-group">											
+											<div id = "register_email" class = "field">
+												<span>Email</span><input type = "text" class="input"  name = 'email'/>									
+												<div class = "input-note">
+													Email
+												</div>
+											</div>
+									</div>
 									<div class="form-button">
 									<button id = "btn_register"class="button bg-main" type="submit">注册</button>
 									</div>
@@ -62,14 +70,16 @@
 		<script>
 			var accountOk	 = false;
 			var passwordOk	 = false;
-			var repasswordOk = false; 
+			var repasswordOk = false;
+			var emailOk 	 = false; 
 			$(function(){
 				$("#btn_register").click(function(){
 					// alert('1');
 					var user = $('#register_account input').val().replace(/\s/g,'');
 					var password = $('#register_password input').val().replace(/\s/g,'');
 					var repassword = $('#register_repassword input').val().replace(/\s/g,'');
-					if(accountOk && passwordOk && repasswordOk){
+					var email = $("#register_email input").val().replace(/\s/g,'');
+					if(accountOk && passwordOk && repasswordOk && emailOk){
 						$.ajax({
 							url:"{:U('login/checkAccount')}",
 							type:'post',
@@ -77,6 +87,7 @@
 								'user':user,
 								'password':password,
 								'repassword':repassword,
+								'email':email
 							},
 							dataType:'json',
 							error:function(){
@@ -84,8 +95,9 @@
 							},
 							success:function(data){
 								// alert("{:U('login/successregister',['user'=>'"+data.user+"'])}");
-								var strUrl = "{:U('login/successregister',['user'=>datauser])}";
+								var strUrl = "{:U('login/successregister',['user'=>datauser,'email'=>dataemail])}";
 								strUrl = strUrl.replace('datauser',data.user); 
+								strUrl = strUrl.replace('dataemail',email);
 								window.location = strUrl;
 							}
 						});
@@ -164,6 +176,15 @@
 					}
 				});
 
+				$("#register_email input").blur(function(){
+					if(!$(this).val()){
+						$('#register_email div').html('不能为空').addClass('text-red').removeClass('text-green');
+						emailOk = false;
+						return;
+					}
+					emailOk = true;
+					$("#register_email div").html('Email').removeClass('text-red');
+				});
 
 			});
 		</script>

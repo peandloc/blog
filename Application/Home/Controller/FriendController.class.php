@@ -6,7 +6,8 @@ class FriendController extends BaseController {
     public function index() {
 		$this->QQ = M('qquser')->field(true)->select();
 		$this->count = M('qquser') -> count();
-        $this->display();
+        // $this->display();
+        $this->redirect('index/index');
     }
 
 }

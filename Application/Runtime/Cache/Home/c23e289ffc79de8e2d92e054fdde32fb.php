@@ -91,11 +91,11 @@ $(document).ready(function(){
 <div class="demo-nav padding-big-top fixed">
 	<div class="container">
 		<div class="line">
-			<div class="xl12 xs3 xm3 xb2">
+			<div class="xl12 xs3 xm3 xb2" style = "display:none;">
 				<button class="button icon-navicon float-right" data-target="#header-demo"></button>
 				<a href="<?php echo U('Index/index');?>"><img src="/Public/Home/images/logo.png" class="ring-hover"/></a>
 			</div>
-			<div class=" xl12 xs9 xm9 xb10 nav-navicon" id="header-demo">
+				<div class=" xl12 xs12 xm12 xb12 nav-navicon" id="header-demo"><!-- <div class=" xl12 xs9 xm9 xb10 nav-navicon" id="header-demo"> -->
 				<div class="xs8 xm6 xb8 padding-small">
 					<ul class="nav nav-menu nav-inline nav-big">
 						<li <?php if(strtolower($nownav['m']) == 'index'): ?>class="l_active"<?php endif; ?>><a href="<?php echo U('/index');?>">首页</a></li>
@@ -306,7 +306,7 @@ $(document).ready(function(){
 		</ul>
 	</div>
 	<br />
-	<div class="tab border-main" data-toggle="hover" style="height: 470px;">
+	<div class="tab border-main" data-toggle="hover" style="height: 470px;display:none;">
 		<div class="tab-head">
 
 			<ul class="tab-nav">
@@ -479,7 +479,7 @@ $(document).ready(function(){
 	</script>
 			</div>
 		</div>	
-		<div class="container-layout bg-black">
+		<div class="container-layout bg-black" style="display:none;">
     <div class="border-top padding-top foot">
         <div class="text-center">
             <ul class="nav nav-inline">
@@ -491,10 +491,12 @@ $(document).ready(function(){
                 
             </ul>
         </div>
-        <div class="text-center height-big">
+        <div class="text-center height-big" style="display:none;">
             <?php echo C('address');?>&nbsp;&nbsp;&nbsp;<?php echo C('copyright');?>
-        |<a href="<?php echo U('Admin/login/index');?>" target="_blank"> 博客管理  </a>
-        |<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256135378'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256135378' type='text/javascript'%3E%3C/script%3E"));</script>
+            |<a href="<?php echo U('Admin/login/index');?>" target="_blank"> 博客管理  </a>
+            |<script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1256135378'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256135378' type='text/javascript'%3E%3C/script%3E"));</script>
         </div>
     </div>
 </div>

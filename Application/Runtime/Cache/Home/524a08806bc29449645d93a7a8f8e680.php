@@ -192,6 +192,14 @@ $(document).ready(function(){
 												</div>
 											</div>
 									</div>
+									<div class = "form-group">											
+											<div id = "register_email" class = "field">
+												<span>Email</span><input type = "text" class="input"  name = 'email'/>									
+												<div class = "input-note">
+													Email
+												</div>
+											</div>
+									</div>
 									<div class="form-button">
 									<button id = "btn_register"class="button bg-main" type="submit">注册</button>
 									</div>
@@ -334,7 +342,7 @@ $(document).ready(function(){
 		</ul>
 	</div>
 	<br />
-	<div class="tab border-main" data-toggle="hover" style="height: 470px;">
+	<div class="tab border-main" data-toggle="hover" style="height: 470px;display:none;">
 		<div class="tab-head">
 
 			<ul class="tab-nav">
@@ -507,7 +515,7 @@ $(document).ready(function(){
 	</script>
 			</div>
 		</div>	
-		<div class="container-layout bg-black">
+		<div class="container-layout bg-black" style="display:none;">
     <div class="border-top padding-top foot">
         <div class="text-center">
             <ul class="nav nav-inline">
@@ -519,10 +527,12 @@ $(document).ready(function(){
                 
             </ul>
         </div>
-        <div class="text-center height-big">
+        <div class="text-center height-big" style="display:none;">
             <?php echo C('address');?>&nbsp;&nbsp;&nbsp;<?php echo C('copyright');?>
-        |<a href="<?php echo U('Admin/login/index');?>" target="_blank"> 博客管理  </a>
-        |<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256135378'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256135378' type='text/javascript'%3E%3C/script%3E"));</script>
+            |<a href="<?php echo U('Admin/login/index');?>" target="_blank"> 博客管理  </a>
+            |<script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1256135378'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256135378' type='text/javascript'%3E%3C/script%3E"));</script>
         </div>
     </div>
 </div>
@@ -530,14 +540,16 @@ $(document).ready(function(){
 		<script>
 			var accountOk	 = false;
 			var passwordOk	 = false;
-			var repasswordOk = false; 
+			var repasswordOk = false;
+			var emailOk 	 = false; 
 			$(function(){
 				$("#btn_register").click(function(){
 					// alert('1');
 					var user = $('#register_account input').val().replace(/\s/g,'');
 					var password = $('#register_password input').val().replace(/\s/g,'');
 					var repassword = $('#register_repassword input').val().replace(/\s/g,'');
-					if(accountOk && passwordOk && repasswordOk){
+					var email = $("#register_email input").val().replace(/\s/g,'');
+					if(accountOk && passwordOk && repasswordOk && emailOk){
 						$.ajax({
 							url:"<?php echo U('login/checkAccount');?>",
 							type:'post',
@@ -545,6 +557,7 @@ $(document).ready(function(){
 								'user':user,
 								'password':password,
 								'repassword':repassword,
+								'email':email
 							},
 							dataType:'json',
 							error:function(){
@@ -552,8 +565,9 @@ $(document).ready(function(){
 							},
 							success:function(data){
 								// alert("<?php echo U('login/successregister',['user'=>'"+data.user+"']);?>");
-								var strUrl = "<?php echo U('login/successregister',['user'=>datauser]);?>";
+								var strUrl = "<?php echo U('login/successregister',['user'=>datauser,'email'=>dataemail]);?>";
 								strUrl = strUrl.replace('datauser',data.user); 
+								strUrl = strUrl.replace('dataemail',email);
 								window.location = strUrl;
 							}
 						});
@@ -632,6 +646,15 @@ $(document).ready(function(){
 					}
 				});
 
+				$("#register_email input").blur(function(){
+					if(!$(this).val()){
+						$('#register_email div').html('不能为空').addClass('text-red').removeClass('text-green');
+						emailOk = false;
+						return;
+					}
+					emailOk = true;
+					$("#register_email div").html('Email').removeClass('text-red');
+				});
 
 			});
 		</script>

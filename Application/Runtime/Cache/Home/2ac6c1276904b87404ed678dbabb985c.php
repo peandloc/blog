@@ -179,19 +179,31 @@ $(document).ready(function(){
 								<?php echo ($Article["a_content"]); ?>
 							</div>
 							
-							<div class="a-write hidden-xs">
+							<div class="a-write hidden-xs" style = "display:none;">
 								<?php if(($Article["a_type"]) == "1"): ?>本文为原创，转载请注明出处:&nbsp;&nbsp;<a><?php echo C('siteurl');?>/Article/index/a_id/<?php echo ($Article["a_id"]); ?>.html</a>
 									<br><?php endif; ?>
 								发表自：&nbsp;<?php echo ($Article["a_from"]); ?>&nbsp;&nbsp;地址：<?php echo (getIpaddr($Article["create_ip"])); ?>&nbsp;&nbsp;评论：&nbsp;<?php echo (count($Common)); ?>&nbsp;&nbsp;关键词：&nbsp;<?php echo ($Article['a_keyword']?$Article['a_keyword']:'暂无标签'); ?>&nbsp;&nbsp;
 							</div>
+							<hr/>
 							<div>
-								<button class="button button-big bg-blue dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">评论</button>
-								<a class="dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">评论</a>
+								<!-- <button class="button button-big bg-blue dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">评论</button> -->
+								<!-- <a class="dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%" style="font-size:20px;">评论(0)</a> -->
+								<a id="comment" style="font-size:20px;"><strong>评论(0)</strong></a>
+								<div id="comments">
+									<?php if(is_array($comments)): foreach($comments as $key=>$com): ?><div class = "divdong" style = "border-bottom:1px dashed #999999;">
+											<p>
+											<label class="text-main"><?php echo ($com["username"]); ?>:</label><?php echo ($com["d_content"]); ?>
+											<br/>
+											<span style = "color:#9A9A9A;"><?php echo ($com["time"]); ?></span>
+											</p>
+										</div><?php endforeach; endif; ?>
+								</div>
 							</div>
-							<div>
+							<!-- <div>
 								<b>共有0个评论</b>
-							</div>
-							<div class="bdsharebuttonbox fenxiang">
+							</div> -->
+							<br/>
+							<div class="bdsharebuttonbox fenxiang" style = "display:none;">
 								<a class="bds_more" href="#" data-cmd="more"></a>
 								<a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone"></a>
 								<a title="分享到腾讯微博" class="bds_tqq" href="#" data-cmd="tqq"></a>
@@ -204,7 +216,7 @@ $(document).ready(function(){
 								window._bd_share_config = {
 									"common": {
 										"bdSnsKey": {},
-										"bdText": "轮回博客的分享",
+										"bdText": "晓晓博客的分享",
 										"bdMini": "2",
 										"bdMiniList": false,
 										"bdPic": "http://tianjianlong.com.cn//Public/Img/logo.png",
@@ -217,7 +229,7 @@ $(document).ready(function(){
 								0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 							</script>
 						</div>
-						<hr />
+						<hr /><br/>
 						<div class="a-up">
 							<p>上一篇：
 								<?php if($down['a_id'] == 0): ?><a title='没有了'>&nbsp;没有了</a>
@@ -369,7 +381,7 @@ $(document).ready(function(){
 		</ul>
 	</div>
 	<br />
-	<div class="tab border-main" data-toggle="hover" style="height: 470px;">
+	<div class="tab border-main" data-toggle="hover" style="height: 470px;display:none;">
 		<div class="tab-head">
 
 			<ul class="tab-nav">
@@ -542,7 +554,7 @@ $(document).ready(function(){
 	</script>
 			</div>
 		</div>
-		<div class="container-layout bg-black">
+		<div class="container-layout bg-black" style="display:none;">
     <div class="border-top padding-top foot">
         <div class="text-center">
             <ul class="nav nav-inline">
@@ -554,10 +566,12 @@ $(document).ready(function(){
                 
             </ul>
         </div>
-        <div class="text-center height-big">
+        <div class="text-center height-big" style="display:none;">
             <?php echo C('address');?>&nbsp;&nbsp;&nbsp;<?php echo C('copyright');?>
-        |<a href="<?php echo U('Admin/login/index');?>" target="_blank"> 博客管理  </a>
-        |<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256135378'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256135378' type='text/javascript'%3E%3C/script%3E"));</script>
+            |<a href="<?php echo U('Admin/login/index');?>" target="_blank"> 博客管理  </a>
+            |<script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1256135378'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256135378' type='text/javascript'%3E%3C/script%3E"));</script>
         </div>
     </div>
 </div>
@@ -592,6 +606,14 @@ $(document).ready(function(){
 				</div> -->
 			</div>
 		</div>
+	<script>
+		$(function(){
+			$("#comment").click(function(){
+
+			});
+		});
+	</script>
+
 	</body>
 
 </html>

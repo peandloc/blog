@@ -34,13 +34,14 @@ class LoginController extends BaseController {
 				// 	// $this->ajaxReturn($data);
 				}
 				
-				if(!empty(I('post.password')) && empty($accountExists)){
+				if(!empty(I('post.password')) && empty($accountExists) && !empty(I('post.email'))){
 				// }else{
 					$password = trim(I('post.password'));
-					$insert['username']=$user;
-					$insert['user'] = $user;
-					$insert['password']=MD5($password);
-					$insert['state'] = 0;
+					$insert['username']	= $user;
+					$insert['user'] 	= $user;
+					$insert['password']	= MD5($password);
+					$insert['state'] 	= 0;
+					// $insert['email'] 	= I('post.email');
 					$admin->add($insert);
 					//$sql = $admin->getLastSql();
 					//$data = ['msg'=>$user,'sql'=>$sql];
@@ -74,13 +75,14 @@ class LoginController extends BaseController {
 		$key = base64_encode(I('get.user')); //encrypt user;
 		$confirmUrl = U('login/confirm',['key'=>$key]);
 		$content = '欢迎注册晓晓博客，请点击链接激活: '.'http://'.$_SERVER['HTTP_HOST'].$confirmUrl.' 如有任何问题请回复此邮件～～～～～';
-		if(SendMail('787788147@qq.com',$title,$content)){
+		$email = I('get.email');
+		if(SendMail($email,$title,$content)){
                 $a = '发送成功！';
             }
     		else{
 	           $b = '发送失败';
     		}
-   		$_SERVER['HTTP_REFERER'];
+   		// $_SERVER['HTTP_REFERER'];
 		$this->display();
 	}
 
@@ -94,4 +96,6 @@ class LoginController extends BaseController {
 			$this->success('帐号激活成功','/login/login',3);
 		} 
 	}
+
+	
 }
